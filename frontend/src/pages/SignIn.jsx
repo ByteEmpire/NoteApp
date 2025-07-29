@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Signup.css"; // Reusing same styles
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom"; 
 
 // Use .env value if available, else fallback to localhost for local dev
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
@@ -176,8 +176,8 @@ const SignIn = () => {
           <p className="signin-link">
             Need an account?{" "}
             <Link to="/signup" className="signin-anchor">
-            Create one
-           </Link>
+              Create one
+            </Link>
           </p>
         </div>
       </div>
