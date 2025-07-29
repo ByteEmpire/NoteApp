@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Signup.css";
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
+
 const SignUp = () => {
   const [name, setName] = useState("");
   const [dob, setDob] = useState("");
@@ -28,7 +30,7 @@ const SignUp = () => {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/otp/send-otp", {
+      const res = await fetch(`${API_BASE_URL}/api/otp/send-otp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, dob, email }),
@@ -57,7 +59,7 @@ const SignUp = () => {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/otp/verify-otp", {
+      const res = await fetch(`${API_BASE_URL}/api/otp/verify-otp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, otp }),
