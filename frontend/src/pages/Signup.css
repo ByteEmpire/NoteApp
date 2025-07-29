@@ -1,0 +1,181 @@
+/* Main container */
+.signup-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+/* Left form section */
+.form-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background-color: white;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 24rem;
+}
+
+.form-header {
+    margin-bottom: 1.5rem;
+}
+
+.form-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.form-subtitle {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+/* Signup form */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Floating label wrapper */
+.floating-label {
+    position: relative;
+}
+
+/* Floating label text */
+.floating-label label {
+    position: absolute;
+    top: -0.6rem;
+    left: 0.75rem;
+    background-color: white;
+    padding: 0 0.25rem;
+    font-size: 0.75rem;
+    color: #6b7280;
+    pointer-events: none;
+    transition: color 0.2s ease;
+}
+
+/* Input box */
+.floating-label .email-input {
+    width: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    outline: none;
+    color: #000; /* text always black */
+    transition: all 0.2s ease;
+}
+
+/* Input focus effect */
+.floating-label .email-input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+}
+
+/* Label turns blue when input is focused */
+.floating-label:focus-within label {
+    color: #2563eb;
+}
+
+/* Error message */
+.error-message {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* Get OTP button */
+.submit-button {
+    width: 100%;
+    background-color: #2563eb;
+    color: white;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Sign in link */
+.signin-link {
+    font-size: 0.875rem;
+    color: #6b7280;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.signin-anchor {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signin-anchor:hover {
+    text-decoration: underline;
+}
+
+/* Right image section */
+.image-section {
+    display: none;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+}
+
+/* Background image fills like Figma */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Responsive layout */
+@media (min-width: 768px) {
+    .signup-container {
+        flex-direction: row;
+    }
+
+    .form-section {
+        flex: 1;
+        border-right: 1px solid #e5e7eb;
+    }
+
+    .image-section {
+        display: block;
+        flex: 1;
+    }
+}
+/* OTP Section */
+.otp-section {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Sign In button inside OTP section */
+.signin-btn {
+    background-color: #2563eb; /* same blue */
+}
+
+.signin-btn:hover {
+    background-color: #1d4ed8;
+}
