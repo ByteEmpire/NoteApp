@@ -1,79 +1,98 @@
-# 📒 NoteApp
+# 📒 NoteApp – Secure & Feature-Rich Note Taking Application  
 
-A secure and feature-rich **Note Taking Application** built with **MERN Stack** (MongoDB, Express, React, Node.js).  
-It allows users to **sign up / sign in via OTP**, create and manage notes, share them via email, download as PDF, and keep data stored in MongoDB.
-
----
-
-## 🚀 Features
-- **OTP-based Authentication** – Sign up and sign in using email and One Time Password.
-- **Create Notes** – Quickly create and save personal notes in MongoDB.
-- **View All Notes** – Display your saved notes in a clean dashboard.
-- **Download Notes as PDF** – Export your notes as PDF using jsPDF.
-- **Share Notes via Email** – Send notes to anyone using FormSubmit.
-- **Delete Notes** – Remove notes you no longer need.
-- **Responsive Design** – Works on both desktop and mobile.
-- **JWT Authentication** – All note routes are protected with JWT.
+A modern, secure, and full-featured **Note Taking Application** built with the **MERN Stack** (MongoDB, Express, React, Node.js).  
+Experience seamless OTP authentication, intuitive note management, and powerful sharing capabilities.  
 
 ---
 
-## 🛠️ Tech Stack
-- **Frontend:** React.js, CSS, jsPDF, React Icons  
-- **Backend:** Node.js, Express.js  
-- **Database:** MongoDB (Mongoose)  
-- **Authentication:** OTP via Resend API, JWT  
-- **Email Service:** FormSubmit / Resend API
-- **Version Control:** Git
+## ✨ Key Features  
 
+| Feature                | Description                                                                 |
+|------------------------|-----------------------------------------------------------------------------|
+| 🔒 **OTP Auth**        | Secure sign up/login via email with One-Time Password                       |
+| 📝 **Rich Notes**      | Create, edit, and organize notes with ease                                  |
+| 👁️ **Note Preview**   | View all your notes in a beautiful dashboard layout                         |
+| 📤 **Export PDF**      | Download notes as PDF with jsPDF integration                                |
+| ✉️ **Email Sharing**  | Share notes directly via email using FormSubmit/Resend API                  |
+| 🗑️ **Smart Deletion** | Safely remove unwanted notes                                                |
+| 📱 **Responsive UI**   | Flawless experience across all devices                                      |
+| 🛡️ **JWT Protected**  | All routes secured with JSON Web Tokens                                     |
 
 ---
 
-## ⚙️ Installation & Setup
+## 🛠 Tech Stack  
+
+**Frontend**  
+- React.js  
+- Tailwind CSS (or vanilla CSS)  
+- jsPDF  
+- React Icons  
+
+**Backend**  
+- Node.js  
+- Express.js  
+
+**Database & Services**  
+- MongoDB (with Mongoose)  
+- JWT Authentication  
+- Resend API (OTP & Email)  
+- FormSubmit (Alternative Email)  
+
+---
+
+## 🚀 Getting Started  
+
+### Prerequisites  
+- Node.js (v16+)  
+- MongoDB Atlas account  
+- Resend API key (for OTP)  
+
+### Installation  
 
 ```bash
-# 1️⃣ Clone the repository
+# Clone the repository
 git clone https://github.com/ByteEmpire/NoteApp.git
 cd NoteApp
 
-# 2️⃣ Backend setup
+# Backend setup
 cd backend
 npm install
 
-# Create .env file in backend/
-echo "PORT=5000
+# Configure environment variables
+PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
-RESEND_API_KEY=your_resend_api_key" > .env
+RESEND_API_KEY=your_resend_api_key
 
-# Start backend server
+# Start backend
 npm start
 
-# 3️⃣ Frontend setup
-cd ../frontend
+# Frontend setup (in new terminal)
+cd frontend
 npm install
-
-# Start frontend server
 npm start
-
-# 4️⃣ Open in browser
-Visit http://localhost:5173
+```
+---
 
 ## 📸 Screenshots
 
-## Screenshots
+<p align="center">
+  <img width="1884" height="875" alt="image" src="https://github.com/user-attachments/assets/e058ebf7-fad5-424b-ab96-bdb3e969dbcd" />
+  
+  <img width="1881" height="866" alt="image" src="https://github.com/user-attachments/assets/5a77ec0f-da6a-4cae-a88d-a3ed889166dd" />
 
-<img width="1877" height="878" alt="image" src="https://github.com/user-attachments/assets/adf986d9-3f92-41a5-983a-568ca276e4e5" />
+</p>
 
-<img width="1880" height="868" alt="image" src="https://github.com/user-attachments/assets/a43cf189-5d64-456e-9ded-50c445465e62" />
+<p align="center">
+  <img width="1882" height="876" alt="image" src="https://github.com/user-attachments/assets/27746f31-299f-4088-bc38-77af821eec78" />
+  
+  <img width="1919" height="813" alt="image" src="https://github.com/user-attachments/assets/57e5ba30-1704-4f85-950f-215b7c98014b" />
 
-<img width="1858" height="867" alt="image" src="https://github.com/user-attachments/assets/a987db4d-c68b-49c7-aefa-17ffbd3601dc" />
+</p>
 
-<img width="1754" height="354" alt="image" src="https://github.com/user-attachments/assets/77268178-70d5-4a3e-a6c7-efbb279e7505" />
+<p align="center">
+  <img width="1903" height="868" alt="image" src="https://github.com/user-attachments/assets/d3968413-8597-46c3-bed9-67b18d9de122" />
 
-<img width="1873" height="813" alt="image" src="https://github.com/user-attachments/assets/5267045b-1b12-43c0-aa59-309940ac50c2" />
+  <img width="1909" height="882" alt="image" src="https://github.com/user-attachments/assets/cf7d1363-e8c8-4659-94ab-71f968867835" />
 
-<img width="1785" height="853" alt="image" src="https://github.com/user-attachments/assets/10c91698-3145-474e-ab0b-4115c3122c36" />
-
-
-
-
+</p>
