@@ -58,5 +58,22 @@ npm start
 # 4️⃣ Open in browser
 Visit http://localhost:5173
 
+## 📸 Screenshots
+
+## Screenshots
+
+<img width="1877" height="878" alt="image" src="https://github.com/user-attachments/assets/adf986d9-3f92-41a5-983a-568ca276e4e5" />
+
+<img width="1880" height="868" alt="image" src="https://github.com/user-attachments/assets/a43cf189-5d64-456e-9ded-50c445465e62" />
+
+<img width="1858" height="867" alt="image" src="https://github.com/user-attachments/assets/a987db4d-c68b-49c7-aefa-17ffbd3601dc" />
+
+<img width="1754" height="354" alt="image" src="https://github.com/user-attachments/assets/77268178-70d5-4a3e-a6c7-efbb279e7505" />
+
+<img width="1873" height="813" alt="image" src="https://github.com/user-attachments/assets/5267045b-1b12-43c0-aa59-309940ac50c2" />
+
+<img width="1785" height="853" alt="image" src="https://github.com/user-attachments/assets/10c91698-3145-474e-ab0b-4115c3122c36" />
+
+
 
 
