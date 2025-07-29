@@ -3,6 +3,9 @@ import "./Signup.css"; // Reusing same styles
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
+// Use .env value if available, else fallback to localhost for local dev
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
+
 const SignIn = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -31,7 +34,7 @@ const SignIn = () => {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/otp/verify-otp", {
+      const res = await fetch(`${API_BASE_URL}/api/otp/verify-otp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, otp }),
@@ -68,7 +71,7 @@ const SignIn = () => {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/otp/send-otp", {
+      const res = await fetch(`${API_BASE_URL}/api/otp/send-otp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }), // If backend requires name/dob, include here
