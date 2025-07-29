@@ -4,6 +4,9 @@ import { FaTrash, FaShare, FaDownload } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import jsPDF from "jspdf";
 
+// Use environment variable for API base URL
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
+
 const Dashboard = () => {
   const navigate = useNavigate();
 
@@ -25,7 +28,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchNotes = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/notes", {
+        const res = await fetch(`${API_BASE_URL}/api/notes`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         const data = await res.json();
@@ -46,7 +49,7 @@ const Dashboard = () => {
     if (!newNote.trim()) return;
 
     try {
-      const res = await fetch("http://localhost:5000/api/notes", {
+      const res = await fetch(`${API_BASE_URL}/api/notes`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -71,7 +74,7 @@ const Dashboard = () => {
   // Delete note from MongoDB
   const deleteNote = async (noteId) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/notes/${noteId}`, {
+      const res = await fetch(`${API_BASE_URL}/api/notes/${noteId}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` }
       });
