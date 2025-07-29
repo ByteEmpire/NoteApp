@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Signup.css";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -15,7 +16,8 @@ const SignUp = () => {
 
   const navigate = useNavigate();
 
-  const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const validateEmail = (email) =>
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   // Send OTP
   const handleSubmit = async (e) => {
@@ -49,7 +51,7 @@ const SignUp = () => {
   };
 
   // Verify OTP
-  const handleSignIn = async () => {
+  const handleVerifyOtp = async () => {
     if (!otp.trim()) {
       setError("Please enter the OTP");
       return;
@@ -127,13 +129,17 @@ const SignUp = () => {
             {error && <p className="error-message">{error}</p>}
 
             {!showOtpBox && (
-              <button type="submit" className="submit-button" disabled={loading}>
+              <button
+                type="submit"
+                className="submit-button"
+                disabled={loading}
+              >
                 {loading ? "Sending OTP..." : "Get OTP"}
               </button>
             )}
           </form>
 
-          {/* OTP Input & Sign In Button */}
+          {/* OTP Section */}
           {showOtpBox && (
             <div className="otp-section">
               <div className="form-group floating-label">
@@ -148,7 +154,7 @@ const SignUp = () => {
               <button
                 type="button"
                 className="submit-button signin-btn"
-                onClick={handleSignIn}
+                onClick={handleVerifyOtp}
                 disabled={loading}
               >
                 {loading ? "Verifying..." : "Sign In"}
