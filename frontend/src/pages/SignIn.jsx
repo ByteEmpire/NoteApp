@@ -175,9 +175,9 @@ const SignIn = () => {
           {/* Create account link */}
           <p className="signin-link">
             Need an account?{" "}
-            <a href="/signup" className="signin-anchor">
-              Create one
-            </a>
+            <Link to="/signup" className="signin-anchor">
+            Create one
+           </Link>
           </p>
         </div>
       </div>
